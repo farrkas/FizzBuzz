@@ -4,19 +4,25 @@ For numbers which are multiples of both three and five print “FizzBuzz”."  *
 
 function fizzbuzz() {
 
-    var tab = [];
-    for (let i = 0; i <= 100; i++) {
-        tab[i] = i + 1;
+    for (let i = 1; i <= 100; i++) {
 
-        if (tab[i] % 3 == 0 && tab[i] % 5 == 0) { tab[i] = tab[i] + " Fizz Buzz"; continue }
+        if (i % 3 == 0 && i % 5 == 0) {
+            console.log(i + " Fizz Buzz");
+            continue
+        }
 
-        if (tab[i] % 3 == 0) { tab[i] = tab[i] + " Fizz"; continue }
+        if (i % 3 == 0) {
+            console.log(i + " Fizz");
+            continue
+        }
 
-        if (tab[i] % 5 == 0) { tab[i] = tab[i] + " Buzz"; continue }
-
+        if (i % 5 == 0) {
+            console.log(i + " Buzz");
+            continue
+        }
+        console.log(i);
     }
 
-    console.log(tab);
 }
 
 fizzbuzz();
